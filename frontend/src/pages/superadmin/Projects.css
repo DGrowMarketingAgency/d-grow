@@ -1,0 +1,56 @@
+
+/* Projects Management page styles */
+.projects-page {
+  color: #a32227 !important;
+  opacity: 1 !important;
+}
+.projects-page * {
+  color: #a32227 !important;
+  opacity: 1 !important;
+}
+.projects-page h2, .projects-page th {
+  color: #a32227 !important;
+}
+.projects-page label {
+  color: #a32227 !important;
+}
+.projects-page .brand-btn, .projects-page button, .projects-page input[type="submit"] {
+  background: #a32227 !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.projects-page .brand-btn:hover, .projects-page button:hover, .projects-page input[type="submit"]:hover {
+  background: #c13a3f !important;
+  color: #fff !important;
+  transform: scale(1.04);
+}
+.projects-page .action-btn {
+  color: #a32227 !important;
+  background: transparent !important;
+  border: 1px solid #a32227 !important;
+  border-radius: 6px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.95rem;
+  margin-right: 0.3rem;
+  transition: background 0.2s, color 0.2s;
+}
+.projects-page .action-btn:hover {
+  background: #a32227 !important;
+  color: #fff !important;
+}
+
+
+/* Override placeholder text */
+.projects-page ::placeholder {
+  color: #a32227 !important;
+  opacity: 1 !important;
+}
+.projects-page input::-webkit-input-placeholder { color: #a32227 !important; }
+.projects-page input::-moz-placeholder { color: #a32227 !important; }
+.projects-page input:-ms-input-placeholder { color: #a32227 !important; }
+.projects-page input:-moz-placeholder { color: #a32227 !important; }

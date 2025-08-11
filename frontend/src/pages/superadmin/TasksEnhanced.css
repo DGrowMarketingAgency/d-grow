@@ -1,0 +1,20 @@
+.tasks-table-row {
+  background: #000 !important;
+  color: #fff !important;
+}
+.tasks-table-row td {
+  color: #fff !important;
+}
+.tasks-table-row .tasks-action-btn {
+  background: #a32227 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  padding: 6px 18px !important;
+  transition: background 0.2s;
+}
+.tasks-table-row .tasks-action-btn:hover {
+  background: #fff !important;
+  color: #a32227 !important;
+}

@@ -1,0 +1,6 @@
+/* GroupChat dropdown option text color override */
+.groupchat-page select,
+.groupchat-page select option {
+  color: #000000 !important;
+  opacity: 1 !important;
+}

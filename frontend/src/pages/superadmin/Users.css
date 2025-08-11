@@ -1,0 +1,71 @@
+/* Users page styles: default text black */
+.users-page,
+.users-page * {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+/* Page background behind the card: black */
+.users-page {
+  background: #000000 !important;
+}
+/* Main rounded card: solid white */
+.users-page > .bg-white.bg-opacity-10 {
+  background-color: #ffffff !important;
+}
+/* Inner boxes: solid white to match */
+.users-page .bg-white.bg-opacity-10,
+.users-page .bg-white.bg-opacity-20,
+.users-page .bg-white.bg-opacity-5 {
+  background-color: #ffffff !important;
+}
+
+/* Ensure key text elements are black */
+.users-page,
+.users-page *,
+.users-page input,
+.users-page select,
+.users-page textarea,
+.users-page th,
+.users-page td,
+.users-page h1,
+.users-page h2,
+.users-page h3,
+.users-page span,
+.users-page label,
+.users-page p {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+
+/* Hover color for text elements */
+.users-page h1:hover,
+.users-page h2:hover,
+.users-page h3:hover,
+.users-page th:hover,
+.users-page td:hover,
+.users-page p:hover,
+.users-page span:hover,
+.users-page label:hover,
+.users-page a:hover {
+  color: #1c0607 !important;
+}
+
+/* Input and select fields as red boxes with white text */
+.users-page input,
+.users-page select,
+.users-page textarea {
+  background-color: var(--red-color) !important;
+  color: #000000 !important; /* typing text black */
+  caret-color: #000000 !important; /* cursor color black */
+  border-color: transparent !important;
+}
+/* Buttons/links remain white for contrast on pink */
+.users-page button { color: var(--white-color) !important; }
+.users-page a { color: var(--white-color) !important; }
+/* Placeholders to black for readability on pink */
+.users-page ::placeholder { color: #000000 !important; opacity: 1 !important; }
+.users-page input::-webkit-input-placeholder { color: #000000 !important; }
+.users-page input::-moz-placeholder { color: #000000 !important; }
+.users-page input:-ms-input-placeholder { color: #000000 !important; }
+.users-page input:-moz-placeholder { color: #000000 !important; }

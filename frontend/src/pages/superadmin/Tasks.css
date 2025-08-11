@@ -1,0 +1,20 @@
+/* Tasks page text color override */
+.tasks-page select,
+.tasks-page select option {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.tasks-page ::placeholder {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.tasks-page *,
+.tasks-page {
+  color: #ffffff !important;
+}
+/* Button text override for Tasks page */
+.tasks-page button,
+.tasks-page button * {
+  color: #000000 !important;
+  opacity: 1 !important;
+}

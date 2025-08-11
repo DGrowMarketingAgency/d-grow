@@ -1,0 +1,122 @@
+/* Styles for SuperAdminDashboard welcome banner */
+.welcome-banner h2 {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+/* Ensure logout button text stays white despite brand-bg rule */
+.superadmin-dashboard header button {
+  color: var(--white-color) !important;
+}
+/* Brand red for welcome banner title */
+.welcome-title {
+  /* Brand red for welcome banner title */
+  color: var(--red-color) !important;
+}
+/* Brand red for welcome banner subtitle */
+.welcome-subtitle {
+  color: var(--white-color) !important;
+  font-size: 0.875rem; /* matching text-sm */
+}
+/* Brand red for welcome banner subtitle */
+.welcome-banner p {
+  color: var(--white-color) !important;
+}
+/* Ensure welcome banner H2 stays white, overriding brand-bg H2 gradient */
+.brand-bg .welcome-banner h2 {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+/* Neon styling for main title */
+.neon-title {
+  /* White neon text for main title */
+  color: var(--red-color) !important;
+  background: none !important;
+  /* Cyan glow effect */
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.8) !important;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+.superadmin-dashboard h3 {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+/* Force brand gradient as dashboard background */
+.superadmin-dashboard {
+  background: var(--white-color) !important;
+  /* Ensure all text inside the dashboard renders in brand red */
+  color: var(--red-color) !important;
+}
+/* When Users tab is active, force black outer background */
+.superadmin-dashboard.users-bg {
+  background: #000 !important;
+}
+/* Users tab: allow page-specific styles to control card color */
+/* Sidebar styling for dark theme with orange accent */
+.superadmin-dashboard aside {
+  background-color: #1b1c22 !important; /* dark slate */
+  border-right: 1px solid #2a2b33 !important;
+}
+/* Sidebar links/buttons text color */
+.superadmin-dashboard aside a,
+.superadmin-dashboard aside button,
+.superadmin-dashboard aside a.active,
+.superadmin-dashboard aside button.active {
+  color: #ffffff !important;
+}
+/* Sidebar hover effect */
+.superadmin-dashboard aside a:hover,
+.superadmin-dashboard aside button:hover {
+  background-color: rgba(255,255,255,0.1) !important;
+}
+/* Close button inside sidebar should use brand red */
+.superadmin-dashboard aside button.close-btn {
+  color: var(--red-color) !important;
+}
+/* Avatar initial text color */
+.avatar-text {
+  color: #ffffff !important;
+}
+/* Card panels should be white */
+.superadmin-dashboard .bg-white {
+  background-color: #ffffff !important;
+}
+/* Welcome banner in brand red */
+.superadmin-dashboard .welcome-banner {
+  background-color: var(--red-color) !important;
+}
+/* Ensure translucent white utility remains white */
+.superadmin-dashboard .bg-white.bg-opacity-10 {
+  background-color: #ffffff !important;
+}
+/* Quick action buttons in brand red */
+.superadmin-dashboard .grid .block.text-center {
+  background-color: var(--red-color) !important;
+  background-image: none !important;
+  color: var(--white-color) !important;
+}
+/* Welcome banner background in brand red */
+.welcome-banner {
+  background-color: var(--red-color) !important;
+}
+/* Welcome banner heading in brand red */
+.welcome-banner h2 {
+  color: var(--red-color) !important;
+}
+/* Force welcome banner title to brand red, overriding other rules */
+.brand-bg .welcome-banner h2.welcome-title {
+  color: var(--red-color) !important;
+}
+/* Force welcome banner title and subtitle to white */
+.welcome-banner .welcome-title,
+.welcome-banner .welcome-subtitle {
+  color: #ffffff !important;
+}
+/* User management text in brand red */
+.superadmin-users,
+.superadmin-users * {
+  color: var(--red-color) !important;
+  opacity: 1 !important;
+}
