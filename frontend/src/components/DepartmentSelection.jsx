@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import axios from '../api/axios';
 import './DepartmentSelection.css';
 import { useNavigate } from "react-router-dom";
 
+=======
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+axios.defaults.baseURL = "http://localhost:5000";
+
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
 const DepartmentSelection = () => {
   const [departments, setDepartments] = useState([]);
   const [selectedDept, setSelectedDept] = useState("");
@@ -14,7 +22,11 @@ const DepartmentSelection = () => {
 
   const fetchDepartments = async () => {
     try {
+<<<<<<< HEAD
       const res = await axios.get("/departments", authHeaders);
+=======
+      const res = await axios.get("/api/departments", authHeaders);
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
       setDepartments(res.data);
     } catch (error) {
       console.error("Error fetching departments:", error.response?.data?.message || error.message);
@@ -28,7 +40,11 @@ const DepartmentSelection = () => {
   const handleJoin = async () => {
     if (!selectedDept) return;
     try {
+<<<<<<< HEAD
       const res = await axios.put(`/departments/${currentUserId}`, { department: selectedDept }, authHeaders);
+=======
+      const res = await axios.put(`/api/departments/${currentUserId}`, { department: selectedDept }, authHeaders);
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
       setMessage(res.data.message);
       localStorage.setItem("department", res.data.department); // store for future logins
       // Redirect to dashboard or refresh current page so that group chat loads
@@ -44,7 +60,11 @@ const DepartmentSelection = () => {
       {departments.length === 0 ? (
         <p>No departments available.</p>
       ) : (
+<<<<<<< HEAD
         <select className="department-select" value={selectedDept} onChange={(e) => setSelectedDept(e.target.value)}>
+=======
+        <select value={selectedDept} onChange={(e) => setSelectedDept(e.target.value)}>
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
           <option value="">-- Select Department --</option>
           {departments.map((dept) => (
             <option key={dept.id} value={dept.name}>

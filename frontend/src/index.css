@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 /* Custom class to force white text in select for all browsers */
 .custom-white-select,
@@ -90,6 +91,21 @@
 @keyframes wave-move {
   0% { transform: translateX(0); }
   100% { transform: translateX(50%); }
+=======
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
 }
 
 a {
@@ -101,12 +117,21 @@ a:hover {
   color: #535bf2;
 }
 
+<<<<<<< HEAD
 body, #root {
   margin: 0;
   width: 100%;
   height: 100%;
   background: #fff !important;
   font-family: var(--font-primary);
+=======
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
 }
 
 h1 {
@@ -133,6 +158,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+<<<<<<< HEAD
 /* Checked box pattern overlay */
 .landing-pattern::before {
   content: '';
@@ -254,6 +280,12 @@ select option:checked, select option:focus, select option:active {
   --bg-color: #ffffff;
   --card-bg: rgba(0,0,0,0.05);
   --text-color: #213547;
+=======
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
   }
   a:hover {
     color: #747bff;

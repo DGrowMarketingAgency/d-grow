@@ -9,6 +9,22 @@ export default function ProtectedRoute({ children, allowedRoles }) {
     return <Navigate to="/login" replace />;
   }
 
+<<<<<<< HEAD
+=======
+  // Strict mapping of role → dashboard path
+  const roleRoutes = {
+    "Employee": "/employee-dashboard",
+    "Admin": "/admin-dashboard",
+    "Super Admin": "/superadmin-dashboard",
+    "Client": "/client-dashboard",
+  };
+
+  // Check if current path matches the user's assigned dashboard
+  const userDashboardPath = roleRoutes[role];
+  if (location.pathname !== userDashboardPath) {
+    return <Navigate to={userDashboardPath} replace />;
+  }
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
 
   // Check if role is in allowed roles
   if (!allowedRoles.includes(role)) {

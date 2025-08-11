@@ -5,8 +5,12 @@ import { createTask, getTasks, updateTaskStatus, deleteTask, getMyTasks, updateO
 const router = express.Router();
 
 router.post("/", protect(["Admin", "Super Admin"]), createTask);
+<<<<<<< HEAD
 // Allow Admin, SuperAdmin, and Client to view all tasks (including report and onboarding)
 router.get("/", protect(["Admin", "Super Admin", "Client"]), getTasks);
+=======
+router.get("/", protect(["Admin", "Super Admin"]), getTasks);
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
 router.put("/:id", protect(["Admin", "Super Admin"]), updateTaskStatus);
 router.delete("/:id", protect(["Admin", "Super Admin"]), deleteTask);
 router.get("/my", protect(["Employee"]), getMyTasks);

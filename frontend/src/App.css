@@ -2,6 +2,7 @@ html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   min-height: 100vh;
   background-color: #fff;
   background-image: url('../logo.png');
@@ -16,6 +17,8 @@ body, #root, html {
 /* Utility class for text color if needed */
 .text-primary {
   color: #a32227 !important;
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
 }
 
 .center-container {
@@ -34,6 +37,7 @@ body, #root, html {
   margin-top: 20px;
   justify-content: center;
 }
+<<<<<<< HEAD
 
 /* Login Page Styles */
 .login-container {
@@ -149,3 +153,5 @@ body, #root, html {
 .list-item:last-child {
   border-bottom: none;
 }
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e

@@ -63,6 +63,7 @@ export const updateUserDepartment = async (req, res) => {
     console.error("Error updating department:", error);
     res.status(500).json({ message: "Error updating department" });
   }
+<<<<<<< HEAD
 };
 
 // Add a new department
@@ -81,4 +82,6 @@ export const addDepartment = async (req, res) => {
     console.error('Error adding department:', error);
     res.status(500).json({ message: 'Error adding department' });
   }
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
 };
