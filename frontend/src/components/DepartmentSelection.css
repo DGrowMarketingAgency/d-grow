@@ -1,0 +1,12 @@
+/* Styling for the department selection dropdown */
+.department-select {
+  background-color: #2a2f3a;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+}
+.department-select option {
+  background-color: #2a2f3a;
+  color: #ffffff;
+}

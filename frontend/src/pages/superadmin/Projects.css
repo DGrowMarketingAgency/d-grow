@@ -1,0 +1,17 @@
+/* Projects Management page styles */
+.projects-page,
+.projects-page *,
+.projects-page option {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Override placeholder text */
+.projects-page ::placeholder {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.projects-page input::-webkit-input-placeholder { color: #ffffff !important; }
+.projects-page input::-moz-placeholder { color: #ffffff !important; }
+.projects-page input:-ms-input-placeholder { color: #ffffff !important; }
+.projects-page input:-moz-placeholder { color: #ffffff !important; }

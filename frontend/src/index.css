@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Brand color variables */
+:root {
+  --white-color: #ffffff;
+  --black-color: #2b0815;
+  --red-color: #9c1f21;
+  --light-red-color: #fcf1f1;
+  --med-red-color: #d62b2b;
+  --green-color: #2bac7d;
+  /* Brand gradient updated per design spec */
+  --red-and-black: linear-gradient(151deg, rgba(120, 22, 28, 1) 0%, rgba(41, 8, 18, 1) 35%, rgba(23, 32, 48, 1) 100%);
+}
+/* Utility class for branded sections: pink background and red text */
+.brand-bg {
+  background: var(--light-red-color) !important;
+  color: var(--red-color) !important;
+}
+/* Force all elements inside branded sections to use brand red */
+.brand-bg * {
+  color: var(--red-color) !important;
+}
+
+/* Flashing light overlay for animated backgrounds */
+.flash-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3), transparent 60%);
+  mix-blend-mode: overlay;
+  opacity: 0;
+  animation: flash 8s ease-in-out infinite;
+}
+
+@keyframes flash {
+  0%, 80%, 100% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.15;
+  }
+}
+
+/* Gradient wave shapes overlay */
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 15%;
+  left: -50%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  clip-path: polygon(
+    0% 100%,
+    10% 80%, 20% 90%, 30% 70%, 40% 85%,
+    50% 65%, 60% 80%, 70% 60%, 80% 75%,
+    90% 55%, 100% 70%, 100% 100%
+  );
+  animation: wave-move 15s linear infinite;
+  opacity: 0.2;
+  pointer-events: none;
+}
+.wave-top {
+  top: 0;
+}
+.wave-bottom {
+  bottom: 0;
+  transform: scaleY(-1);
+}
+
+@keyframes wave-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body, #root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  /* Pink brand background */
+  background: var(--light-red-color);
+  font-family: var(--font-primary);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Checked box pattern overlay */
+.landing-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><rect x='1' y='1' width='10' height='10' fill='none' stroke='%23fff' stroke-width='1'/><polyline points='3,7 5,9 9,3' fill='none' stroke='%23fff' stroke-width='1'/></svg>");
+  background-repeat: repeat;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Global dropdown (select) styling for readability */
+select {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  padding: 0.5em;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+select option {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+}
+
+/* Override pure white colors to theme variables */
+.text-white {
+  color: var(--text-color) !important;
+}
+.notification,
+.notification * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Force light gray timestamp */
+.notification .timestamp {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+/* Allow buttons inside notification to have black text */
+.notification button {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+.bg-white {
+  background-color: rgba(255,255,255,0.05) !important;
+}
+.bg-white\[\!important\] {
+  background-color: rgba(255,255,255,0.05) !important;
+}
+
+/* Neumorphic shadows */
+.shadow-neu {
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), -6px -6px 15px rgba(255, 255, 255, 0.1);
+}
+.shadow-neu-hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+
+/* FadeInUp animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Notifications styles (o3-mini) */
+.notifications {
+/* Force pure white color for SuperAdminDashboard Users tab */
+.superadmin-users,
+.superadmin-users * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.superadmin-users *::placeholder {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.notification {
+  background-color: #2a2f3a;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+.notification:hover {
+  background-color: #3a3f4a;
+}
+.notification .message {
+  color: #ffffff !important;
+  font-weight: 600;
+  opacity: 1 !important;
+}
+.notification .timestamp {
+  color: #cccccc !important;
+  font-size: 0.85rem;
+  opacity: 1 !important;
+  white-space: nowrap;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --bg-color: #ffffff;
+  --card-bg: rgba(0,0,0,0.05);
+  --text-color: #213547;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

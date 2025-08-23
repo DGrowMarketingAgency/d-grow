@@ -1,0 +1,123 @@
+/* LandingPage.css */
+:root {
+  --bg-color: #000;
+  --star-color: #fff;
+  --shooting-star-color: #ffdd00;
+  --primary-gradient: linear-gradient(45deg, #ff6b6b, #f06595);
+}
+
+.landing-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-color);
+  overflow: hidden;
+}
+
+/* Star layers (box-shadow applied via JS) */
+.stars,
+.stars1,
+.stars2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Shooting star animation */
+.shooting-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+.shooting-stars::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(120deg, transparent, var(--shooting-star-color), transparent);
+  animation: shooting 3s linear infinite;
+}
+@keyframes shooting {
+  0% {
+    transform: translate(0, 0) scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(800px, 800px) scaleX(1);
+    opacity: 0;
+  }
+}
+
+/* Centered content */
+.landing-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* 3D logo effect */
+.logo3d {
+  font-size: 4rem;
+  font-weight: bold;
+  display: inline-block;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin-bottom: 20px;
+}
+.logo3d .letter3d {
+  display: inline-block;
+  position: relative;
+  margin: 0 2px;
+  transform: translateZ(20px);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.2), -2px -2px 0 rgba(255,255,255,0.3);
+  transition: transform 0.3s;
+}
+.logo3d .letter3d:hover {
+  transform: translateZ(40px) rotateY(15deg);
+}
+
+/* Tagline text */
+.text {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Button styling */
+.login-button {
+  background: var(--primary-gradient);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background 0.3s, transform 0.3s;
+}
+.login-button:hover {
+  background: linear-gradient(45deg, #f06595, #ff6b6b);
+  transform: scale(1.05);
+}
+.login-button:active {
+  transform: scale(0.95);
+}

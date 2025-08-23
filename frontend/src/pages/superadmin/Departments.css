@@ -1,0 +1,25 @@
+/* Departments page - force white text */
+.departments-page,
+.departments-page * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.departments-page ::placeholder {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+/* Button text override for Departments page */
+/* Button text override for Departments page */
+.departments-page button,
+.departments-page button *,
+.departments-page a,
+.departments-page a * {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+/* Dropdown text override */
+.departments-page select,
+.departments-page select option {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}

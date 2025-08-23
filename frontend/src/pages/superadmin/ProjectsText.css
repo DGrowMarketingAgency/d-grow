@@ -1,0 +1,21 @@
+/* Projects page text color override */
+.projects-page,
+.projects-page * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.projects-page ::placeholder {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.option,
+.projects-page select option {
+  color: #ffffff !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+/* Button text override for Projects page */
+.projects-page button,
+.projects-page button * {
+  color: #000000 !important;
+  opacity: 1 !important;
+}

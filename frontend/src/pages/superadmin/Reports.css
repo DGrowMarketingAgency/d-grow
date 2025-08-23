@@ -1,0 +1,32 @@
+/* Reports card: default to black text on white */
+/* Ensure the card background is solid white */
+.reports-page {
+  background-color: #ffffff !important;
+}
+.reports-page,
+.reports-page * {
+  color: #000000 !important;
+  opacity: 1 !important;
+}
+/* Make form controls readable on white card */
+.reports-page select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+/* Options in the dropdown */
+.reports-page select option {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+/* Placeholders to black for readability */
+.reports-page ::placeholder { color: #000000 !important; opacity: 1 !important; }
+/* Buttons stay white text for contrast on colored backgrounds */
+.reports-page button,
+.reports-page button * { color: #ffffff !important; opacity: 1 !important; }
+/* Download button color */
+.reports-page button {
+  background-color: var(--red-color) !important;
+}
+.reports-page button:hover {
+  background-color: var(--red-color) !important;
+}
