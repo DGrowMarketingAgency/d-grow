@@ -1,0 +1,19 @@
+.chat-btn,
+.chat-btn *,
+.chat-btn:active,
+.chat-btn:focus,
+.chat-btn:visited,
+.chat-btn:hover,
+.chat-btn:hover *,
+.chat-btn:focus-visible {
+  color: #fff !important;
+}
+.chat-btn {
+  background: #a32227 !important;
+  border: 2px solid #a32227 !important;
+  font-weight: 600 !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+.chat-btn:hover {
+  background: #7a181b !important;
+}

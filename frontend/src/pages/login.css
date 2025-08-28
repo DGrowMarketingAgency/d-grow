@@ -1,0 +1,55 @@
+/* Force input text color to white, including autofill and focus states */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  color: #fff !important;
+  background-color: #222 !important;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="text"]::placeholder {
+  color: #ccc !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff !important;
+  box-shadow: 0 0 0 1000px #222 inset !important;
+  background-color: #222 !important;
+}
+/* Set caret color to white for all input fields in login page */
+.bg-gray-900 {
+  caret-color: #fff !important;
+}
+/* Login page specific styles for select dropdown */
+.custom-white-select,
+.custom-white-select option {
+  color: #fff !important;
+  background: #222 !important;
+}
+.custom-white-select:focus,
+.custom-white-select:active {
+  color: #fff !important;
+  background: #222 !important;
+}
+.custom-white-select option:checked,
+.custom-white-select option:focus,
+.custom-white-select option:active {
+  color: #fff !important;
+  background: #222 !important;
+}
+/* For Edge/IE */
+.custom-white-select::-ms-value {
+  color: #fff !important;
+  background: #222 !important;
+}
+/* For Firefox */
+@-moz-document url-prefix() {
+  .custom-white-select {
+    color: #fff !important;
+    background: #222 !important;
+  }
+}

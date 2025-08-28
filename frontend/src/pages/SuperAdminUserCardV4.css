@@ -1,0 +1,29 @@
+.superadmin-user-card-v4 {
+  background: #fff !important;
+  color: #000 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15) !important;
+  padding: 1.5rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-height: 80px !important;
+}
+.superadmin-user-card-v4 * {
+  background: transparent !important;
+  color: #000 !important;
+}
+.superadmin-user-card-v4 .superadmin-chat-btn {
+  background: #a32227 !important;
+  color: #fff !important;
+  border: none !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  padding: 6px 18px !important;
+  transition: background 0.2s;
+}
+.superadmin-user-card-v4 .superadmin-chat-btn:hover {
+  background: #000 !important;
+  color: #a32227 !important;
+}

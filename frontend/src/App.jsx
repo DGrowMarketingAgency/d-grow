@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from "react";
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";

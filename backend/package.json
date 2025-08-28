@@ -17,8 +17,16 @@
     "express": "^5.1.0",
     "json2csv": "^6.0.0-alpha.2",
     "jsonwebtoken": "^9.0.2",
+<<<<<<< HEAD
     "multer": "^2.0.2",
     "node-cron": "^4.2.1",
+=======
+<<<<<<< HEAD
+    "multer": "^2.0.2",
+    "node-cron": "^4.2.1",
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
     "pdfkit": "^0.17.1",
     "pg": "^8.16.3",
     "socket.io": "^4.8.1"

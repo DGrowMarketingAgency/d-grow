@@ -1,6 +1,13 @@
 import express from "express";
 import dotenv from "dotenv";
+<<<<<<< HEAD
 import bcrypt from "bcryptjs"; // for seeding default user
+=======
+<<<<<<< HEAD
+import bcrypt from "bcryptjs"; // for seeding default user
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 import http from "http";
 import {Server} from "socket.io";
 import attendanceRoutes from "./routes/attendanceRoutes.js";
@@ -15,11 +22,21 @@ import privateMsgsRoutes from "./routes/privateMsgsRoutes.js";
 import employeesRoutes from "./routes/employeesRoutes.js";
 import departmentsRoutes from "./routes/departmentsRoutes.js";
 import reportsRoutes from "./routes/reportsRoutes.js";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 import projectRoutes from "./routes/projectRoutes.js";
 import groupChatRoutes from "./routes/groupChatRoutes.js";
 import path from 'path';
 import pool from './config/db.js';
 import cron from 'node-cron'; // scheduled job runner
+<<<<<<< HEAD
+=======
+=======
+import groupChatRoutes from "./routes/groupChatRoutes.js";
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 
 dotenv.config();
 const app = express();
@@ -32,6 +49,10 @@ app.use(cors({
 }));
 
 app.use(express.json());
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 // Serve uploaded files statically
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 // Ensure private_messages table columns for attachments allow nulls
@@ -150,6 +171,18 @@ app.use("/attendance",attendanceRoutes);
 app.use("/api/admin", adminRoutes);
 // Mount tasks routes under /api/tasks for consistency with frontend axios baseURL
 app.use("/api/tasks", taskRoutes);
+<<<<<<< HEAD
+=======
+=======
+
+createUserTable();
+
+app.use("/api/auth", authRoutes);
+app.use("/attendance",attendanceRoutes);
+app.use("/admin",adminRoutes);
+app.use("/tasks", taskRoutes);
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 app.use("/leaves",leaveRoutes);
 app.use("/api/notifications",notificationsRoutes);
 app.use("/api/private-msgs",privateMsgsRoutes);
@@ -158,10 +191,19 @@ app.use("/api/group-chat", groupChatRoutes);
 app.use("/api/departments", departmentsRoutes);
 app.use("/api/access", accessRoutes);
 app.use("/api/reports", reportsRoutes);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 app.use("/api/projects", projectRoutes);
 // Mount payments routes
 import paymentsRoutes from './routes/paymentsRoutes.js';
 app.use('/api/payments', paymentsRoutes);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 
 // Create HTTP server and Socket.io instance
 const server = http.createServer(app);
@@ -205,6 +247,10 @@ io.on("connection", (socket) => {
 server.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 // Schedule daily reminders at 8 AM to notify SuperAdmins of upcoming payments (tomorrow)
 cron.schedule('0 8 * * *', async () => {
   try {
@@ -265,3 +311,8 @@ cron.schedule('0 8 * * *', async () => {
     console.error('Error scheduling payment reminders:', err);
   }
 });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7

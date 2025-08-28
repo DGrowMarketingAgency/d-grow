@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Departments page - force white text */
 .departments-page,
 .departments-page * {
@@ -22,4 +23,112 @@
 .departments-page select option {
   color: #ffffff !important;
   opacity: 1 !important;
+=======
+
+/* Modern creative background */
+.departments-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #222222 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glassmorphism card */
+.departments-page .glass-card {
+  background: #a32227;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+  border-radius: 20px;
+  border: 1px solid #a32227;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.departments-page h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.departments-page ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.departments-page li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #111;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(120, 120, 120, 0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+.departments-page li:hover {
+  background: #f3f3f3;
+  color: #111;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.departments-page button {
+  background: #a32227;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(163, 34, 39, 0.15);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.departments-page button:hover {
+  background: #c13a3f;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.departments-page input[type="text"],
+.departments-page input[type="search"] {
+  background: rgba(255,255,255,0.25);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  margin-right: 0.5rem;
+  transition: background 0.2s;
+}
+.departments-page input[type="text"]::placeholder {
+  color: #f3e9ff;
+  opacity: 1;
+}
+
+.departments-page form {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.departments-page a {
+  color: #ffe082;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.departments-page a:hover {
+  color: #fff;
+  text-decoration: underline;
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 }

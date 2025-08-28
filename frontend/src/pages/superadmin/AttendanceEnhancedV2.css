@@ -1,0 +1,57 @@
+.attendance-enhanced-bg {
+  background: #000;
+}
+.attendance-management-heading {
+  color: #a32227;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.attendance-enhanced-table {
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+}
+.attendance-enhanced-table th {
+  background: #a32227;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 16px;
+}
+.attendance-enhanced-table td {
+  background: #fff;
+  color: #000;
+  padding: 10px 16px;
+  border-bottom: 1px solid #eee;
+}
+.attendance-enhanced-btn {
+  background: #a32227;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 6px 18px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.attendance-enhanced-btn:hover {
+  background: #fff;
+  color: #a32227;
+  border: 1px solid #a32227;
+  transform: scale(1.05);
+}
+.attendance-enhanced-input, .attendance-enhanced-select {
+  background: #fff;
+  color: #000;
+  border: 1px solid #a32227;
+  border-radius: 8px;
+  padding: 6px 12px;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+.attendance-enhanced-input:focus, .attendance-enhanced-select:focus {
+  border-color: #a32227;
+  box-shadow: 0 0 0 2px #a3222722;
+}

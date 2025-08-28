@@ -4,16 +4,34 @@ import axios from "axios";
 import PrivateChat from "../../components/PrivateChat";
 import DeptGroupChat from "../../components/DeptGroupChat";
 import DepartmentSelection from "../../components/DepartmentSelection";
+<<<<<<< HEAD
 // Chart.js imports for report graph
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+=======
+<<<<<<< HEAD
+// Chart.js imports for report graph
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { Line } from 'react-chartjs-2';
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 import { io } from "socket.io-client";
 
 axios.defaults.baseURL = "http://localhost:5000";
 
+<<<<<<< HEAD
 // Register Chart.js modules
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
+=======
+<<<<<<< HEAD
+// Register Chart.js modules
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 export default function ClientDashboard() {
   const name = localStorage.getItem("name");
   const token = localStorage.getItem("token");
@@ -24,6 +42,10 @@ export default function ClientDashboard() {
   const [selectedReceiver, setSelectedReceiver] = useState(null);
   const [deptTasks, setDeptTasks] = useState([]);
   const [message, setMessage] = useState("");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
   // Payment and report tasks for clients
   const [payments, setPayments] = useState([]);
   const [tasks, setTasks] = useState([]);
@@ -52,12 +74,28 @@ export default function ClientDashboard() {
   const authHeaders = { headers: { Authorization: `Bearer ${token}` } };
   // Dashboard view control: 'home', 'notifications', 'report', 'privateChat'
   const [view, setView] = useState('home'); // 'home','notifications','privateChat','groupChat','payments'
+<<<<<<< HEAD
+=======
+=======
+  const navigate = useNavigate();
+  
+  const authHeaders = { headers: { Authorization: `Bearer ${token}` } };
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 
   // Fetch notifications
   const fetchNotifications = async () => {
     try {
       const res = await axios.get("/api/notifications", authHeaders);
+<<<<<<< HEAD
   setNotifications(res.data);
+=======
+<<<<<<< HEAD
+  setNotifications(res.data);
+=======
+      setNotifications(res.data);
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
     } catch (error) {
       console.error("Error fetching notifications:", error.response?.data?.message || error.message);
     }
@@ -81,7 +119,14 @@ export default function ClientDashboard() {
     link.click();
     document.body.removeChild(link);
     setMessage("Report downloaded successfully.");
+<<<<<<< HEAD
     setView('report');
+=======
+<<<<<<< HEAD
+    setView('report');
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
   } catch (error) {
     console.error("Error downloading report:", error.response?.data?.message || error.message);
     setMessage("Error downloading report.");
@@ -97,6 +142,10 @@ export default function ClientDashboard() {
     }
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
   // Fetch client-specific pending payments
   const fetchPayments = async () => {
     try {
@@ -187,6 +236,14 @@ export default function ClientDashboard() {
     fetchPayments();
     fetchTasks();
     fetchProjects();
+<<<<<<< HEAD
+=======
+=======
+  useEffect(() => {
+    fetchNotifications();
+    fetchEmployees();
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 
     // Setup real-time notifications
     const socket = io("http://localhost:5000");
@@ -239,6 +296,10 @@ useEffect(() => {
   };
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
     <div className="flex h-screen overflow-hidden font-poppins">
       {/* Sidebar (glassmorphism) */}
       <aside className="w-24 flex flex-col items-center py-8 space-y-6 backdrop-blur-md bg-white bg-opacity-10 border border-white border-opacity-20 rounded-xl mx-2">
@@ -458,6 +519,162 @@ useEffect(() => {
         )}
         </main>
       </div>
+<<<<<<< HEAD
+=======
+=======
+    <div
+      className="center-container"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "1rem",
+        marginTop: "2rem",
+        padding: "1rem"
+      }}
+    >
+      <h1>Client Dashboard</h1>
+      <h2>Hello, {name}</h2>
+
+      {/* Notifications Panel */}
+      <div style={{ width: "300px", padding: "1rem", border: "1px solid #ccc", borderRadius: "8px" }}>
+        <h3>Notifications</h3>
+        {notifications.length === 0 ? (
+          <p>No notifications.</p>
+        ) : (
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {notifications.map((notif) => (
+              <li
+                key={notif.id}
+                style={{ marginBottom: "0.5rem", borderBottom: "1px solid #eee", paddingBottom: "0.5rem", cursor: "pointer" }}
+                onClick={() => {
+                  if (notif.message.includes("sent you a new message")) {
+                    const senderName = notif.message.split(" sent you a new message")[0];
+                    const sender = chatEmployees.find((e) => e.name === senderName);
+                    if (sender) {
+                      setSelectedReceiver(sender);
+                    }
+                  }
+                }}
+              >
+                <p>{notif.message}</p>
+                <small>{new Date(notif.created_at).toLocaleString()}</small>
+                <div style={{ marginTop: "0.5rem" }}>
+                  {!notif.is_read && (
+                    <button onClick={(e) => { e.stopPropagation(); markAsRead(notif.id); }} style={{ marginRight: "0.5rem" }}>
+                      Mark as Read
+                    </button>
+                  )}
+                  <button onClick={(e) => { e.stopPropagation(); deleteNotification(notif.id); }}>
+                    Delete
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <div style={{ marginTop: "2rem", width: "400px", padding: "1rem", border: "1px solid #ccc", borderRadius: "8px" }}>
+        <h3>Department Tasks</h3>
+        {deptTasks.length === 0 ? (
+          <p>No tasks for your department yet.</p>
+        ) : (
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {deptTasks.map((task) => (
+              <li key={task.id} style={{ marginBottom: "0.5rem", borderBottom: "1px solid #eee", paddingBottom: "0.5rem" }}>
+                <strong>{task.title}</strong>
+                <p>{task.description}</p>
+                <p>
+                  Assigned to: {task.employee_name} | Status: {task.status}
+                </p>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <div style={{ marginTop: "2rem", width: "400px", padding: "1rem", border: "1px solid #ccc", borderRadius: "8px", textAlign: "center" }}>
+      <h3>Status Reports</h3>
+      <button onClick={downloadStatusReport} style={{ padding: "0.5rem 1rem" }}>
+        Download Status Report (PDF)
+      </button>
+    </div>
+
+      {/* Private Chat Section */}
+      <div style={{ width: "400px", padding: "1rem", border: "1px solid #ccc", boxSizing: "border-box" }}>
+        {selectedReceiver ? (
+          <>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <button
+                onClick={() => setSelectedReceiver(null)}
+                style={{ fontSize: "0.8rem", padding: "0.3rem 0.5rem" }}
+              >
+                Back
+              </button>
+              <h3 style={{ margin: 0 }}>Chat with {selectedReceiver.name}</h3>
+            </div>
+            <PrivateChat
+              receiverId={selectedReceiver.id}
+              receiverName={selectedReceiver.name}
+              onClose={() => setSelectedReceiver(null)}
+            />
+          </>
+        ) : (
+          <>
+            <h3>Select an Employee to Chat With</h3>
+            {chatEmployees.length === 0 ? (
+              <p>No employees found.</p>
+            ) : (
+              <ul style={{ listStyle: "none", padding: 0 }}>
+                {chatEmployees
+                  .filter(emp => emp.id !== currentUserId)
+                  .map((emp) => (
+                    <li key={emp.id} style={{ marginBottom: "0.5rem" }}>
+                      <button onClick={() => setSelectedReceiver(emp)}>{emp.name}</button>
+                    </li>
+                  ))}
+              </ul>
+            )}
+          </>
+        )}
+      </div>
+
+      {/* Group Chat Section */}
+      <div style={{ width: "400px", padding: "1rem", border: "1px solid #ccc", boxSizing: "border-box" }}>
+        {assignedDept ? (
+          <div>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <h3>Department Group Chat: {assignedDept}</h3>
+              <button
+                onClick={async () => {
+                  try {
+                    await axios.put(`/api/departments/${currentUserId}`, { department: null }, authHeaders);
+                    localStorage.removeItem("department");
+                    window.location.reload();
+                  } catch (error) {
+                    console.error("Error leaving department:", error.response?.data?.message || error.message);
+                  }
+                }}
+                style={{ fontSize: "0.8rem", padding: "0.3rem 0.5rem" }}
+              >
+                Leave Department
+              </button>
+            </div>
+            <DeptGroupChat department={assignedDept} />
+          </div>
+        ) : (
+          <DepartmentSelection />
+        )}
+      </div>
+
+      <div style={{ marginTop: "1rem" }}>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+
+      {message && <p style={{ color: "green" }}>{message}</p>}
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
     </div>
   );
 }

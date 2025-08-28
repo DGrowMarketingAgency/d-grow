@@ -1,0 +1,16 @@
+.superadmin-user-card-v2 {
+  background: #322227 !important;
+  color: #fff !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15) !important;
+  padding: 1.5rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-height: 80px !important;
+}
+.superadmin-user-card-v2 * {
+  background: transparent !important;
+  color: #fff !important;
+}

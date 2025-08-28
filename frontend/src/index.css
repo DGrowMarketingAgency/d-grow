@@ -1,4 +1,26 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+=======
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Custom class to force white text in select for all browsers */
+.custom-white-select,
+.custom-white-select option {
+  color: #fff !important;
+}
+/* For Edge/IE */
+.custom-white-select::-ms-value {
+  color: #fff !important;
+  background: #222 !important;
+}
+/* For Firefox */
+@-moz-document url-prefix() {
+  .custom-white-select {
+    color: #fff !important;
+    background: #222 !important;
+  }
+}
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 /* Brand color variables */
 :root {
   --white-color: #ffffff;
@@ -9,6 +31,10 @@
   --green-color: #2bac7d;
   /* Brand gradient updated per design spec */
   --red-and-black: linear-gradient(151deg, rgba(120, 22, 28, 1) 0%, rgba(41, 8, 18, 1) 35%, rgba(23, 32, 48, 1) 100%);
+<<<<<<< HEAD
+=======
+  --font-primary: 'Poppins', sans-serif;
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 }
 /* Utility class for branded sections: pink background and red text */
 .brand-bg {
@@ -72,6 +98,24 @@
 @keyframes wave-move {
   0% { transform: translateX(0); }
   100% { transform: translateX(50%); }
+<<<<<<< HEAD
+=======
+=======
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 }
 
 a {
@@ -83,13 +127,30 @@ a:hover {
   color: #535bf2;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 body, #root {
   margin: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   /* Pink brand background */
   background: var(--light-red-color);
   font-family: var(--font-primary);
+=======
+  background: #fff !important;
+  font-family: var(--font-primary);
+=======
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 }
 
 h1 {
@@ -116,6 +177,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 /* Checked box pattern overlay */
 .landing-pattern::before {
   content: '';
@@ -139,8 +204,18 @@ select {
   border: 1px solid rgba(255,255,255,0.3);
 }
 select option {
+<<<<<<< HEAD
   background-color: rgba(0, 0, 0, 0.8);
   color: #ffffff;
+=======
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: #ffffff !important;
+}
+
+select option:checked, select option:focus, select option:active {
+  color: #fff !important;
+  background-color: #222 !important;
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 }
 
 /* Override pure white colors to theme variables */
@@ -232,6 +307,15 @@ select option {
   --bg-color: #ffffff;
   --card-bg: rgba(0,0,0,0.05);
   --text-color: #213547;
+<<<<<<< HEAD
+=======
+=======
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
   }
   a:hover {
     color: #747bff;

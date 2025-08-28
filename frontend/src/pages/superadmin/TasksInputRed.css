@@ -1,0 +1,14 @@
+.tasks-input-red {
+  background: #a32227 !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10) !important;
+}
+.tasks-input-red::placeholder {
+  color: #fff !important;
+  opacity: 1 !important;
+}

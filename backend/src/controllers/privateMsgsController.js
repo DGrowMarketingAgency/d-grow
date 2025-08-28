@@ -4,6 +4,10 @@ import { createNotification } from "./notificationsController.js";
 // Send a private message
 export const sendPrivateMessage = async (req, res) => {
   try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
     const sender_id = req.user.id;
     const { receiver_id, message } = req.body;
     if (!receiver_id || (!message && !req.file)) {
@@ -22,6 +26,23 @@ export const sendPrivateMessage = async (req, res) => {
   // Notify receiver with sender name and actual message content
   const notifyContent = `${req.user.name}: ${messageValue}`;
   await createNotification(receiver_id, notifyContent);
+<<<<<<< HEAD
+=======
+=======
+    const sender_id = req.user.id; // sender is logged in user
+    const { receiver_id, message } = req.body;
+    if (!receiver_id || !message) {
+      return res.status(400).json({ message: "Receiver and message are required." });
+    }
+
+    const result = await pool.query(
+      "INSERT INTO private_messages (sender_id, receiver_id, message) VALUES ($1, $2, $3) RETURNING *",
+      [sender_id, receiver_id, message]
+    );
+
+    await createNotification(receiver_id, `${req.user.name} sent you a new message.`);
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
     res.status(201).json(result.rows[0]);
   } catch (error) {
     console.error("Error sending message:", error);

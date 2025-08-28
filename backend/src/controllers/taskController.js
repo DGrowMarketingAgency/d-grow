@@ -3,15 +3,35 @@ import { createNotification } from "./notificationsController.js";
 
 export const createTask = async (req, res) => {
   try {
+<<<<<<< HEAD
     // Now require department and optionally urgent flag
     const { title, description, assigned_to, department, is_urgent = false } = req.body;
+=======
+<<<<<<< HEAD
+    // Now require department and optionally urgent flag
+    const { title, description, assigned_to, department, is_urgent = false } = req.body;
+=======
+    // Now require department as well
+    const { title, description, assigned_to, department } = req.body;
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
     if (!title || !assigned_to || !department) {
       return res.status(400).json({ message: "Title, Department and Assigned Employee required" });
     }
 
     const result = await pool.query(
+<<<<<<< HEAD
       "INSERT INTO tasks (title, description, assigned_to, department, is_urgent) VALUES ($1, $2, $3, $4, $5) RETURNING *",
       [title, description, assigned_to, department, is_urgent]
+=======
+<<<<<<< HEAD
+      "INSERT INTO tasks (title, description, assigned_to, department, is_urgent) VALUES ($1, $2, $3, $4, $5) RETURNING *",
+      [title, description, assigned_to, department, is_urgent]
+=======
+      "INSERT INTO tasks (title, description, assigned_to, department) VALUES ($1, $2, $3, $4) RETURNING *",
+      [title, description, assigned_to, department]
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
     );
     await createNotification(assigned_to, `A new task "${title}" has been assigned to you.`);
     res.status(201).json(result.rows[0]);

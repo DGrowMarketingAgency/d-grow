@@ -1,0 +1,7 @@
+.user-card {
+  background: #fff !important;
+  color: #000 !important;
+}
+.user-card-text, .user-card * {
+  color: #000 !important;
+}

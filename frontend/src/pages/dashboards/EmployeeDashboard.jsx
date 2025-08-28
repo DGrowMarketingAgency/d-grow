@@ -23,7 +23,14 @@ export default function EmployeeDashboard() {
   const [leaveRequests, setLeaveRequests] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [notifications, setNotifications] = useState([]);
+<<<<<<< HEAD
   const [projects, setProjects] = useState([]);
+=======
+<<<<<<< HEAD
+  const [projects, setProjects] = useState([]);
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
   const authHeaders = { headers: { Authorization: `Bearer ${token}` } };
 
   // ✅ Leave request states
@@ -224,6 +231,10 @@ const handleLogout = async () => {
     };
   }, [currentUserId]);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
   const fetchMyProjects = async () => {
     try {
       const res = await axios.get('/api/projects/my', authHeaders);
@@ -248,10 +259,32 @@ const handleLogout = async () => {
 
   return (
     <div className="dashboard-container full-screen">
+<<<<<<< HEAD
+=======
+=======
+  return (
+    <div
+      className="center-container"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        gap: "1rem",
+        overflowY: "auto",
+      }}
+    >
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
       <h1>Employee Dashboard</h1>
       <h2>Hello, {name}</h2>
 
       {/* Notifications Panel */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
       <div className="dashboard-card">
         <h3 className="panel-header">Notifications</h3>
         {notifications.length === 0 ? (
@@ -260,6 +293,34 @@ const handleLogout = async () => {
           <ul className="list">
             {notifications.map((notif) => (
               <li key={notif.id} className="list-item">
+<<<<<<< HEAD
+=======
+=======
+      <div style={{ marginTop: "1rem", padding: "1rem", border: "1px solid #ccc", borderRadius: "8px", width: "300px" }}>
+        <h3>Notifications</h3>
+        {notifications.length === 0 ? (
+          <p>No notifications.</p>
+        ) : (
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {notifications.map((notif) => (
+              <li
+                key={notif.id}
+                style={{ marginBottom: "0.5rem", borderBottom: "1px solid #eee", paddingBottom: "0.5rem", cursor: "pointer" }}
+                onClick={() => {
+                  // If notification indicates a new chat message, open that conversation.
+                  if (notif.message.includes("sent you a new message")) {
+                    // Extract sender name from message. Assumes format: "John Doe sent you a new message."
+                    const senderName = notif.message.split(" sent you a new message")[0];
+                    // Try to find that employee from the list (skip if not found)
+                    const emp = employees.find((e) => e.name === senderName);
+                    if (emp) {
+                      setSelectedReceiver(emp);
+                    }
+                  }
+                }}
+              >
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
                 <p>{notif.message}</p>
                 <small>{new Date(notif.created_at).toLocaleString()}</small>
                 <div style={{ marginTop: "0.5rem" }}>
@@ -279,6 +340,10 @@ const handleLogout = async () => {
       </div>
 
       {/* ✅ Attendance buttons */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
       <div className="button-group">
         <button className="action-button" onClick={checkIn} disabled={status !== "idle"}>
           Check-In
@@ -288,11 +353,29 @@ const handleLogout = async () => {
         </button>
         <button className="action-button" onClick={() => navigate("/employee-dashboard")}>Dashboard</button>
         <button className="action-button" onClick={handleLogout}>Logout</button>
+<<<<<<< HEAD
+=======
+=======
+      <div className="button-group" style={{ display: "flex", gap: "1rem" }}>
+        <button onClick={checkIn} disabled={status !== "idle"}>
+          Check-In
+        </button>
+        <button onClick={checkOut} disabled={status !== "checkedIn"}>
+          Check-Out
+        </button>
+        <button onClick={() => navigate("/employee-dashboard")}>Dashboard</button>
+        <button onClick={handleLogout}>Logout</button>
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
       </div>
 
       {message && <p>{message}</p>}
 
       {/* Leave Request Form */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
       <div className="dashboard-card">
         <h3 className="panel-header">Request Leave</h3>
         {userAccess.leave_request ? (
@@ -325,6 +408,43 @@ const handleLogout = async () => {
         )}
         {leaveMessage && <p style={{ color: "green" }}>{leaveMessage}</p>}
       </div>
+<<<<<<< HEAD
+=======
+=======
+<div style={{ marginTop: "2rem", border: "1px solid #ccc", padding: "1rem", borderRadius: "8px", width: "300px" }}>
+  <h3>Request Leave</h3>
+  {userAccess.leave_request ? (
+    <>
+      <input
+        type="date"
+        value={leaveForm.start_date}
+        onChange={(e) => setLeaveForm({ ...leaveForm, start_date: e.target.value })}
+      />
+      <input
+        type="date"
+        value={leaveForm.end_date}
+        onChange={(e) => setLeaveForm({ ...leaveForm, end_date: e.target.value })}
+        style={{ marginTop: "0.5rem" }}
+      />
+      <textarea
+        placeholder="Reason"
+        value={leaveForm.reason}
+        onChange={(e) => setLeaveForm({ ...leaveForm, reason: e.target.value })}
+        style={{ marginTop: "0.5rem" }}
+      />
+      <button onClick={submitLeaveRequest} style={{ marginTop: "0.5rem" }}>
+        Submit Request
+      </button>
+    </>
+  ) : (
+    <p style={{ color: "grey" }}>
+      Leave request feature is restricted. Please contact your administrator.
+    </p>
+  )}
+  {leaveMessage && <p style={{ color: "green" }}>{leaveMessage}</p>}
+</div>
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 
       {/* ✅ My Leave Requests */}
       <div
@@ -384,6 +504,10 @@ const handleLogout = async () => {
                 borderRadius: "6px",
               }}
             >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
               <p>
                 <strong>Title:</strong> {task.title}
                 {task.is_urgent && (
@@ -392,6 +516,12 @@ const handleLogout = async () => {
                   </span>
                 )}
               </p>
+<<<<<<< HEAD
+=======
+=======
+              <p><strong>Title:</strong> {task.title}</p>
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
               <p><strong>Description:</strong> {task.description}</p>
               <p><strong>Status:</strong> {task.status}</p>
 
@@ -418,6 +548,10 @@ const handleLogout = async () => {
         )}
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
       {/* ✅ My Projects */}
       <div style={{ marginTop: '2rem', border: '1px solid #ccc', padding: '1rem', borderRadius: '8px', width: '300px' }}>
         <h3>My Projects</h3>
@@ -442,6 +576,11 @@ const handleLogout = async () => {
         )}
       </div>
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 {/* Private Chat Container */}
 <div style={{ marginTop: "2rem", border: "1px solid #ccc", padding: "1rem", width: "400px", boxSizing: "border-box" }}>
   {userAccess.private_chat ? (

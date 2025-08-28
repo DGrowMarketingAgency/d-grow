@@ -1,0 +1,19 @@
+.superadmin-chat-btn,
+.superadmin-chat-btn *,
+.superadmin-chat-btn:active,
+.superadmin-chat-btn:focus,
+.superadmin-chat-btn:visited,
+.superadmin-chat-btn:hover,
+.superadmin-chat-btn:hover *,
+.superadmin-chat-btn:focus-visible {
+  color: #fff !important;
+}
+.superadmin-chat-btn {
+  background: #a32227 !important;
+  border: 2px solid #a32227 !important;
+  font-weight: 600 !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+.superadmin-chat-btn:hover {
+  background: #7a181b !important;
+}

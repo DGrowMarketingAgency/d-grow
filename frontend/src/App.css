@@ -2,6 +2,26 @@ html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  min-height: 100vh;
+  background-color: #fff;
+  background-image: url('../logo.png');
+  background-repeat: repeat;
+  background-size: 80px 80px;
+}
+
+body, #root, html {
+  color: #a32227;
+}
+
+/* Utility class for text color if needed */
+.text-primary {
+  color: #a32227 !important;
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 }
 
 .center-container {
@@ -20,6 +40,10 @@ html, body, #root {
   margin-top: 20px;
   justify-content: center;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 
 /* Login Page Styles */
 .login-container {
@@ -40,7 +64,11 @@ html, body, #root {
 .login-card h2 {
   text-align: center;
   margin-bottom: 1.5rem;
+<<<<<<< HEAD
   color: #333;
+=======
+  color: #a32227;
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 }
 .login-input, .login-select {
   width: 100%;
@@ -101,7 +129,11 @@ html, body, #root {
 .panel-header {
   font-size: 1.25rem;
   margin-bottom: 1rem;
+<<<<<<< HEAD
   color: #333;
+=======
+  color: #a32227;
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
 }
 .button-group .action-button {
   padding: 0.75rem 1.5rem;
@@ -135,3 +167,8 @@ html, body, #root {
 .list-item:last-child {
   border-bottom: none;
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d3d77a7581ca8f69f49219777c1d6dc1b188395e
+>>>>>>> 3f014bd22e10e37ea0a98bd114216001af0af8e7
